@@ -1,0 +1,73 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Tv Azteca Guatemala" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/azteca-guatemala.webp" group-title="Guatemala", Tv Azteca Guatemala
+https://channel1-tva.duin.dev/tv/streaming/2/stream.m3u8
+#EXTINF:-1 tvg-id="Canal 3 El Super Canal" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/Canal-3-guatemala.webp" group-title="Guatemala", Canal 3 El Super Canal
+https://d2qsan2ut81n2k.cloudfront.net/live/6b4f0a21-94d5-4fb6-9742-0f78923723cd/medialist_4276517416086298479_hls.m3u8
+#EXTINF:-1 tvg-id="Canal 7 Televisiete" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/canal-7-guatemala.webp" group-title="Guatemala", Canal 7 Televisiete
+https://d3r1d0jzdq322.cloudfront.net/original.m3u8
+#EXTINF:-1 tvg-id="Canal 23 TN23" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/tn23-guatemala.webp" group-title="Guatemala", Canal 23 TN23
+https://d2qsan2ut81n2k.cloudfront.net/live/0fa8c94f-fc47-466d-beda-8fc43bf963d7/medialist_5900814650867226228_hls.m3u8
+#EXTINF:-1 tvg-id="Guatevision" tvg-logo="https://s2.dmcdn.net/u/A9NJV1am0wbwrvYIW/60x60" group-title="Guatemala", Guatevision
+https://live.eu-north-1b.cf.dmcdn.net/sec2(wRmphTAmje9Br1EUU8_XHfD3nJ0qyD7CRiUPJTdpjLDrSipOj8NshUN9VPV9yxq30fZj1dW9griTsg6uheyy6EBN8IUUpo6jNiNncWjW4GDwdkbK_1QFUgDCmJtUmTp_)/dm/3/x8lth64/s/live-240.m3u8
+#EXTINF:-1 tvg-id="VisiónTV" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/vision-tv-solola.webp" group-title="Guatemala", VisiónTV
+https://cdn.streamhispanatv.net:3076/live/visiontvlive.m3u8
+#EXTINF:-1 tvg-id="Canal 100 Chinique" tvg-logo="https://static.wixstatic.com/media/7acae1_655bf668e7bd454c9def9fcc738bab02~mv2.png" group-title="Guatemala", Canal 100 Chinique
+https://cdn.streamhispanatv.net:3295/live/canal100chilive.m3u8
+#EXTINF:-1 tvg-id="TotoVisión" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/totovision.webp" group-title="Guatemala", TotoVisión
+https://cdn.streamhispanatv.net:3652/live/totovisiongtlive.m3u8
+#EXTINF:-1 tvg-id="Canal 9 Barbe TV" tvg-logo="https://static.wixstatic.com/media/7acae1_8dc4cf299fb34214ad9e49492ee42421~mv2.png" group-title="Guatemala", Canal 9 Barbe TV
+https://cdn.streamhispanatv.net:3549/live/barbetvlive.m3u8
+#EXTINF:-1 tvg-id="Canal 13 Esquipulas IntercableOriente" tvg-logo="https://emisorasgt.com/wp-content/uploads/2023/04/canal-13-esquipulas.webp" group-title="Guatemala",Canal 13 Esquipulas IntercableOriente
+https://tv91.hostingnuclear.com:19360/intercable/intercable.m3u8
+#EXTINF:-1 tvg-id="Tele Costa Guatemala" tvg-logo="https://tv.radiosdeguate.com/wp-content/uploads/2023/04/telecosta-escuintla-400x267.webp" group-title="Guatemala", Tele Costa Guatemala
+https://tv91.hostingnuclear.com:19360/telecosta/telecosta.m3u8
+#EXTINF:-1 tvg-shift="-6"  group-title="Guatemala", Canal 11 Tele Once
+http://tecnotv.club/0701ene/phpcode/lista3.php?c=a0jk&token=tecnotokenplustv&f=.m3u8
+#EXTINF:-1 tvg-id="" tvg-name="Visión Tv HD" tvg-logo="https://static.wixstatic.com/media/7acae1_73e0b4e3e4984e1fa287381b8f2a810f~mv2.png" group-title="Guatemala",Visión Tv HD
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/45
+#EXTINF:-1 tvg-id="" tvg-name="Visión Tv SD (GUA)" tvg-logo="https://static.wixstatic.com/media/7acae1_73e0b4e3e4984e1fa287381b8f2a810f~mv2.png" group-title="Guatemala",Visión Tv SD (GUA)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/46
+#EXTINF:-1 tvg-id="" tvg-name="Totovisión (TOT)" tvg-logo="https://static.wixstatic.com/media/7acae1_53119f9bd94741c9bbc6d971331cdaa4~mv2.png" group-title="Regionales Guatemala",Totovisión (TOT)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/47
+#EXTINF:-1 tvg-id="" tvg-name="Tv Florencia (SAC)" tvg-logo="https://static.wixstatic.com/media/7acae1_4f77437ba53c4b898edfddd58c96faa4~mv2.png" group-title="Regionales Guatemala",Tv Florencia (SAC)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/49
+#EXTINF:-1 tvg-id="" tvg-name="TDS (SOL)" tvg-logo="https://static.wixstatic.com/media/7acae1_1f0c4b88ed58453e9df4437c9a665329~mv2.png" group-title="Regionales Guatemala",TDS (SOL)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/52
+#EXTINF:-1 tvg-id="" tvg-name="Barbe tv (SRO)" tvg-logo="https://static.wixstatic.com/media/7acae1_8dc4cf299fb34214ad9e49492ee42421~mv2.png" group-title="Regionales Guatemala",Barbe tv (SRO)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/53
+#EXTINF:-1 tvg-id="" tvg-name="Aurora Media Films (TOT)" tvg-logo="https://static.wixstatic.com/media/7acae1_82b6b5d51d954299bbc7ce7e9d67393d~mv2.png" group-title="Regionales Guatemala",Aurora Media Films (TOT)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/54
+#EXTINF:-1 tvg-id="" tvg-name="Canal 100 tv Chinique (QUI)" tvg-logo="https://static.wixstatic.com/media/7acae1_655bf668e7bd454c9def9fcc738bab02~mv2.png" group-title="Regionales Guatemala",Canal 100 tv Chinique (QUI)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/56
+#EXTINF:-1 tvg-id="" tvg-name="SAS Tv (SUCH)" tvg-logo="https://static.wixstatic.com/media/7acae1_6724b4d57d0c43e6a84ef0e51227d08d~mv2.png" group-title="Regionales Guatemala",SAS Tv (SUCH)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/58
+#EXTINF:-1 tvg-id="" tvg-name="Sol Tv (SOL)" tvg-logo="https://static.wixstatic.com/media/7acae1_c0451c6af6e14ed094f814f0ded70fe1~mv2.png" group-title="Regionales Guatemala",Sol Tv (SOL)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/60
+#EXTINF:-1 tvg-id="" tvg-name="Canal 26 Cono Sur Tv (Jut)" tvg-logo="https://static.wixstatic.com/media/7acae1_79bb351050ce4760941788c17a1fc501~mv2.png" group-title="Regionales Guatemala",Canal 26 Cono Sur Tv (Jut)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/61
+#EXTINF:-1 tvg-id="" tvg-name="ElRoy Tv (SOL)" tvg-logo="https://static.wixstatic.com/media/7acae1_c2dfc76045fa4c79ba692e7cd0f3e25f~mv2.png" group-title="Regionales Guatemala",ElRoy Tv (SOL)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/62
+#EXTINF:-1 tvg-id="" tvg-name="Más Tv (SNM)" tvg-logo="https://static.wixstatic.com/media/7acae1_0a56fe220b8e4fe3a54a32bf98a9f9ff~mv2.png" group-title="Regionales Guatemala",Más Tv (SNM)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/65
+#EXTINF:-1 tvg-id="" tvg-name="Canal 21 TCN" tvg-logo="https://static.wixstatic.com/media/7acae1_14f0cac6b5034f55a921ce5cfa22926d~mv2.png" group-title="Regionales Guatemala",Canal 21 TCN
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/75
+#EXTINF:-1 tvg-id="" tvg-name="Luna Visión (QUE)" tvg-logo="https://static.wixstatic.com/media/7acae1_85ef772bed8a43ef93caf066157c0941~mv2.png" group-title="Regionales Guatemala",Luna Visión (QUE)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/84
+#EXTINF:-1 tvg-id="" tvg-name="Supercable" tvg-logo="https://static.wixstatic.com/media/7acae1_65d43779fb554a2282027c7d32e4ab33~mv2.png" group-title="Regionales Guatemala",Supercable
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/259
+#EXTINF:-1 tvg-id="" tvg-name="Nim Tv (Sol)" tvg-logo="" group-title="Regionales Guatemala",Nim Tv (Sol)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/497
+#EXTINF:-1 tvg-id="" tvg-name="Canal 84 Cristo te llama (ALV)" tvg-logo="" group-title="Regionales Guatemala",Canal 84 Cristo te llama (ALV)
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/501
+#EXTINF:-1 tvg-id="" tvg-name="MASTV Toto" tvg-logo="https://static.wixstatic.com/media/7acae1_0f0f413f6c58499f91b93187b809edd3~mv2.png" group-title="Regionales Guatemala",MASTV Toto
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/505
+#EXTINF:-1 tvg-id="" tvg-name="Knal4 Quiche" tvg-logo="" group-title="Regionales Guatemala",Knal4 Quiche
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/520
+#EXTINF:-1 tvg-id="" tvg-name="Quezada Tv" tvg-logo="" group-title="Regionales Guatemala",Quezada Tv
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/522
+#EXTINF:-1 tvg-id="" tvg-name="Canal Ixil" tvg-logo="" group-title="Regionales Guatemala",Canal Ixil
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/523
+#EXTINF:-1 tvg-id="" tvg-name="Canal 6 Panajachel" tvg-logo="https://www.panadish.com/images/canal6.jpeg" group-title="Regionales Guatemala",Canal 6 Panajachel
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/528
+#EXTINF:-1 tvg-id="" tvg-name="tv5solola" tvg-logo="" group-title="Regionales Guatemala",tv5solola
+http://iptv.streamhispanatv.net:8080/playgt/playgt2023/517
