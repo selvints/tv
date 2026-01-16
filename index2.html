@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor M3U - Canales</title>
+    
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; margin: 0; display: flex; height: 100vh; }
+        
+        /* Contenedor principal */
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; margin: 0; display: flex; height: 100vh; }
+        
+        /* Contenedor principal */
+        .container { display: flex; width: 100%; height: 100%; }
+
+        /* Estilo del reproductor (izquierda) */
+        .player-container { flex: 3; display: flex; flex-direction: column; justify-content: center; background: #000; padding: 20px; }
+        .video-js { width: 100% !important; height: 80vh !important; }
+
+        /* Estilo de la lista de canales (derecha) */
+        .playlist-container { flex: 1; overflow: auto; background: #252525; overflow-y: auto; border-left: 2px solid #444; padding: 10px; }
+        .playlist-container h2 { text-align: center; font-size: 1.2rem; margin-bottom: 15px; }
+        
+        .channel-item { 
+            padding: 12px; margin-bottom: 5px; background: #333; cursor: pointer; border-radius: 4px; transition: 0.3s;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .playlist-container h1 { text-align: center; color:aqua; font-size: 1.2rem; margin-bottom: 15px; }
+        .channel-item:hover { background: #555; }
+        .channel-item.active { background: #007bff; }
+        
+        /* Responsivo para móviles */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .player-container { flex: none; height: 50%; }
+            .playlist-container { flex: none; height: 50%; border-left: none; border-top: 2px solid #444; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="player-container">
+        <video id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" data-setup='{}'>
+            <p class="vjs-no-js">Para ver este video, por favor habilita JavaScript y considera actualizar a un navegador que soporte video HTML5.</p>
+        </video>
+        <h3 id="current-channel-name" style="margin-top: 15px;">Selecciona un canal</h3>
+    </div>
+
+    <div class="playlist-container" >
+        <div class="select" >
+            <h1>Selecciones País</h1>
+            <select id="selops" onchange="selectchange()" >
+                <option value="opcion1">Argentina</option>
+                <option value="opcion2">Bolivia</option>
+                <option value="opcion3">brasil</option>
+                <option value="opcion4">Chile</option>
+                <option value="opcion5">Colombia</option>
+                <option value="opcion6">Costa Rica</option>
+                <option value="opcion7">Ecuador</option>
+                <option value="opcion8">España</option>
+                <option value="opcion9">Estados Unidos</option>
+                <option value="opcion10" selected>Guatemala</option>
+                <option value="opcion11">México</option>
+                <option value="opcion12">Paraguay</option>
+                <option value="opcion13">Pluto Tv</option>
+                <option value="opcion14">Rep. Dominicana</option>
+                <option value="opcion15">Venezuela</option>
+            </select>
+        </div>
+        <h2>Lista de Canales</h2>
+        <div id="channel-list">Cargando canales...</div>
+    </div>
+</div>
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="script.js" ></script>
+<script src="https://a.bsite.net/footer.js"></script>
+</body>
+</html>
