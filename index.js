@@ -1,48 +1,49 @@
 const http = require('http');
 
-const PORT = process.env.PORT || 3000;
-
 const server = http.createServer((req, res) => {
-    // Configuración de IPTV
-    const user = "mAmaRony4w";
-    const pass = "cFQqrbyu79";
-    const targetBase = "http://live.proyectoxpro.com:8080";
-
-    // Extraemos el ID del canal de la URL (ej: /9615)
     const channelId = req.url.replace('/', '');
-
     if (!channelId || channelId === "favicon.ico") {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Servidor Proxy Activo');
+        res.end("Proxy Online");
         return;
     }
 
-    // Construimos la URL de destino
-    const targetUrl = `${targetBase}/${user}/${pass}/${channelId}`;
+    const targetUrl = `http://live.proyectoxpro.com:8080/mAmaRony4w/cFQqrbyu79/${channelId}`;
 
-    // Cabeceras para saltar bloqueos
+    // Configuración para mantener la conexión viva
     const options = {
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Referer': targetBase + '/',
-            'Host': 'live.proyectoxpro.com:8080'
+            'Referer': 'http://live.proyectoxpro.com:8080/',
+            'Connection': 'keep-alive'
         }
     };
 
-    // Hacemos el túnel (Proxy)
     http.get(targetUrl, options, (proxyRes) => {
-        // Añadimos CORS para tu página hibrido.html
+        // CABECERAS CRÍTICAS PARA MPEGTS.JS
         res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Content-Type', proxyRes.headers['content-type'] || 'video/mp2t');
+        res.setHeader('Content-Type', 'video/mp2t');
+        res.setHeader('Connection', 'keep-alive');
+        res.setHeader('Transfer-Encoding', 'chunked'); // Indica que el tamaño es dinámico
 
-        // Transmitimos el video directamente (Pipe)
+        // Si el servidor de origen nos da error, lo pasamos
+        if (proxyRes.statusCode !== 200) {
+            res.writeHead(proxyRes.statusCode);
+            proxyRes.pipe(res);
+            return;
+        }
+
+        // El 'pipe' en Node.js es mucho más estable que en Workers para video
         proxyRes.pipe(res);
+
+        // Si el cliente (tu web) cierra el reproductor, cerramos la conexión al IPTV
+        req.on('close', () => {
+            proxyRes.destroy();
+        });
+
     }).on('error', (e) => {
-        res.writeHead(500);
-        res.end(`Error: ${e.message}`);
+        console.error(e.message);
+        res.end();
     });
 });
 
-server.listen(PORT, () => {
-    console.log(`Proxy corriendo en puerto ${PORT}`);
-});
+server.listen(process.env.PORT || 3000);
