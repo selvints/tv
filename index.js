@@ -1,49 +1,43 @@
-const http = require('http');
 
-const server = http.createServer((req, res) => {
-    const channelId = req.url.replace('/', '');
-    if (!channelId || channelId === "favicon.ico") {
-        res.end("Proxy Online");
-        return;
-    }
+const express = require('express');
+const axios = require('axios');
+const app = express();
+const port = process.env.PORT || 3000;
 
-    const targetUrl = `http://live.proyectoxpro.com:8080/mAmaRony4w/cFQqrbyu79/${channelId}`;
+app.get('/stream/:canalId', async (req, res) => {
+    const { canalId } = req.params;
+    // Base de tu IPTV con tus credenciales
+    const IPTV_BASE = 'http://live.proyectoxpro.com:8080/mAmaRony4w/cFQqrbyu79';
+    const targetUrl = `${IPTV_BASE}/${canalId}`;
 
-    // Configuración para mantener la conexión viva
-    const options = {
-        headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Referer': 'http://live.proyectoxpro.com:8080/',
-            'Connection': 'keep-alive'
-        }
-    };
+    try {
+        console.log(`Solicitando canal: ${canalId}`);
 
-    http.get(targetUrl, options, (proxyRes) => {
-        // CABECERAS CRÍTICAS PARA MPEGTS.JS
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Content-Type', 'video/mp2t');
-        res.setHeader('Connection', 'keep-alive');
-        res.setHeader('Transfer-Encoding', 'chunked'); // Indica que el tamaño es dinámico
-
-        // Si el servidor de origen nos da error, lo pasamos
-        if (proxyRes.statusCode !== 200) {
-            res.writeHead(proxyRes.statusCode);
-            proxyRes.pipe(res);
-            return;
-        }
-
-        // El 'pipe' en Node.js es mucho más estable que en Workers para video
-        proxyRes.pipe(res);
-
-        // Si el cliente (tu web) cierra el reproductor, cerramos la conexión al IPTV
-        req.on('close', () => {
-            proxyRes.destroy();
+        const response = await axios({
+            method: 'get',
+            url: targetUrl,
+            responseType: 'stream',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            },
+            timeout: 15000 
         });
 
-    }).on('error', (e) => {
-        console.error(e.message);
-        res.end();
-    });
+        // Cabeceras CORS esenciales
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        res.setHeader('Content-Type', 'video/mp2t'); // Formato para MPEG-TS
+
+        response.data.pipe(res);
+
+        req.on('close', () => {
+            response.data.destroy();
+        });
+
+    } catch (error) {
+        console.error('Error:', error.message);
+        res.status(500).setHeader('Access-Control-Allow-Origin', '*').send('Error en el stream');
+    }
 });
 
-server.listen(process.env.PORT || 3000);
+app.listen(port, () => console.log(`Proxy corriendo en puerto ${port}`));
